@@ -1,4 +1,4 @@
 class BoardLink < ActiveRecord::Base
-  belong_to :board
-  belong_to :link
+  belongs_to :board
+  belongs_to :link
 end
