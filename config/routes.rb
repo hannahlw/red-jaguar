@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'boards#index'
+  
   resources :users
 
   resources :links
