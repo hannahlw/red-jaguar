@@ -1,0 +1,20 @@
+<%= @board.name %>
+
+<h2> User name goes -><%= @board.user.name %></h2>
+
+<ul>
+
+<% @board.links.each do |link| %>
+<li><%= link.url  %></li>
+<li><%= link.kind  %></li>
+<% end %>
+
+</ul>
+
+<ul>
+
+<% @board.tags.each do |tag| %>
+<li><%= tag.name  %></li>
+<% end %>
+
+</ul>
