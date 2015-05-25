@@ -4,7 +4,16 @@
 <% @boards.each do |board|  %>
 
 <li><%= board.name %></li>
+
 <% end %>
+
+
+<%= link_to "<button>Sign In</button>".html_safe, user_session_path, :id=>"sign-in", :class=>"button-sign-in" %>
+
+
+
+<%= link_to "<button>Sign Out</button>".html_safe, destroy_user_session_path, :id=>"btn-sign-out", :class=>"sign-out" %>
+
 </ul>
 
 
