@@ -8,11 +8,15 @@
 
 
 b1 = Board.create(name: "Beyonce <3")
+b2 = Board.create(name: "Katy Perry")
+b3 = Board.create(name: "Apple Gadgets")
+b4 = Board.create(name: "Internet of Things")
 l1 = Link.create(url: "http://www.beyonce.com/", kind: 1)
 l2 = Link.create(url: "https://www.youtube.com/watch?v=k4YRWT_Aldo", kind: 2)
 l3 = Link.create(url: "https://www.youtube.com/watch?v=nVtT4jZM9GA", kind: 2)
 l4 = Link.create(url: "https://twitter.com/Beyonce/status/341358625639526401", kind: 3)
 t1 = Tag.create(name: "Pop Culture")
+t2 = Tag.create(name: "Tech")
 
 b1.user_id = User.create(name: "Steven N.").id
 b1.save
@@ -21,6 +25,13 @@ l2.boards << Board.first
 l3.boards << Board.first
 l4.boards << Board.first
 t1.boards << Board.first
+t1.boards << Board.second
+t2.boards << Board.third
+t2.boards << Board.fourth
+
+
+
+
 
 
 
