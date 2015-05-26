@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root 'boards#index'
   
+  post '/filter', :controller => 'boards', :action => 'filter'
+
+  
   resources :users
 
   resources :links
