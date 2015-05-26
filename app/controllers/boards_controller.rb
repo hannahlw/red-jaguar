@@ -1,4 +1,15 @@
 class BoardsController < ApplicationController
+
+  def new
+    @board = Board.new
+    @user = current_user
+  end
+
+  def create
+    @board = Board.create(board_params)
+    redirect_to @board
+  end
+
   def index
     @boards = Board.joins(:tags).where('tags.name' => "Pop Culture").limit(9)
   end
@@ -23,6 +34,12 @@ class BoardsController < ApplicationController
     @web_links = @board.links.where(kind: 1)
     @youtube_links = @board.links.where(kind: 2)
     @twitter_links = @board.links.where(kind: 3)
+  end
+
+  private
+
+  def board_params
+    params.require(:board).permit(:name, :user_id, :links_attributes => [:url,:kind], :tags_attributes => [:name])
   end
 
 

@@ -1,0 +1,23 @@
+<h1 id="clickme">Create a New Board</h1>
+
+<%= form_for @board do |f| %>
+  <div>
+   <%= f.label :name %>
+   <%= f.text_field :name %>
+    <%= f.hidden_field :user_id, value: @user.id %>
+  </div>
+  <h3> Links </h3>
+    <%= f.fields_for(:links, Link.new) do |link| %>
+    <%= link.label :url %>
+    <%= link.text_field :url %><br>
+    <%= link.hidden_field :kind, :value => 1 %>
+<% end %>
+  <h3> Tags </h3>
+    <%= f.fields_for(:tags, Tag.new) do |tag| %>
+    <%= tag.label :name %>
+    <%= tag.text_field :name %><br>
+<% end %>
+  <%= f.submit %>
+
+<% end %>
+

@@ -23,4 +23,18 @@ $( document ).ready(function() {
     })
   })
 
+    $('#board_links_attributes_0_url').on('input', function(){
+      if($('#board_links_attributes_0_url').val().match(/youtube.com/)){
+        $('#board_links_attributes_0_kind').attr('value',2)
+      }
+      else if($('#board_links_attributes_0_url').val().match(/twitter.com/)){
+        $('#board_links_attributes_0_kind').attr('value',3)
+      }
+      else if($('#board_links_attributes_0_url').val().match(/soundcloud.com/)){
+        $('#board_links_attributes_0_kind').attr('value',4)
+      }
+
+    })
+
+
 });
