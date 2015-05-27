@@ -11,12 +11,37 @@
     <%= link.label :url %>
     <%= link.text_field :url %><br>
     <%= link.hidden_field :kind, :value => 1 %>
-<% end %>
+    <% end %>
+    <%= f.fields_for(:links, Link.new) do |link| %>
+    <%= link.label :url %>
+    <%= link.text_field :url %><br>
+    <%= link.hidden_field :kind, :value => 1 %>
+    <% end %>
+    <%= f.fields_for(:links, Link.new) do |link| %>
+    <%= link.label :url %>
+    <%= link.text_field :url %><br>
+    <%= link.hidden_field :kind, :value => 1 %>
+    <% end %>
+    <%= f.fields_for(:links, Link.new) do |link| %>
+    <%= link.label :url %>
+    <%= link.text_field :url %><br>
+    <%= link.hidden_field :kind, :value => 1 %>
+    <% end %>
+    <%= f.fields_for(:links, Link.new) do |link| %>
+    <%= link.label :url %>
+    <%= link.text_field :url %><br>
+    <%= link.hidden_field :kind, :value => 1 %>
+    <% end %>
+    <%= f.fields_for(:links, Link.new) do |link| %>
+    <%= link.label :url %>
+    <%= link.text_field :url %><br>
+    <%= link.hidden_field :kind, :value => 1 %>
+    <% end %>
   <h3> Tags </h3>
     <%= f.fields_for(:tags, Tag.new) do |tag| %>
     <%= tag.label :name %>
     <%= tag.text_field :name %><br>
-<% end %>
+    <% end %>
   <%= f.submit %>
 
 <% end %>
