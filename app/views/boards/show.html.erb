@@ -1,4 +1,10 @@
-<h1><%= @board.name %></h1>
+<div class="card">
+<div class="card-header">
+<h1 style="text-align:center;"><%= @board.name %></h1>
+</div>
+</div>
+<div class="card-body card-padding">
+
 <h3>Views: <%= @board.views %></h3>
 <h4><% @board.tags.each do |tag| %>
 <li>Tags: <%= tag.name  %></li>
@@ -7,6 +13,21 @@
 
 <h5>By <%= @board.user.name %></h5>
 
+<% i = 0 %>
+<% @soundcloud_links.each do |link| %>
+ <div class="col-sm-4">
+  <div class="card">
+    <div class="card-header ch-alt">
+      <h2>Margin <small>We can put text here</small></h2>                     
+        </div>
+        <iframe id="soundcloud_<%=i%>" border=0 frameborder=0 height=250 width=450 
+               src="<%= link.url %>"></iframe>
+            
+    </div>
+  </div>
+  <% i += 1 %>
+<% end %>
+
 
 <% @twitter_links.each do |link| %>
  <div class="col-sm-4">
@@ -14,8 +35,10 @@
     <div class="card-header ch-alt">
       <h2>Margin <small>We can put text here</small></h2>                     
         </div>
-            <iframe border=0 frameborder=0 height=250 width=450 
+        <div style="text-align:center;">
+            <iframe border=0 frameborder=0 scrolling="auto" marginheight="0" width="80%" height="250em"
                src="http://twitframe.com/show?url=<%= link.url %>"></iframe>
+        </div>
     </div>
   </div>
 <% end %>
@@ -28,11 +51,11 @@
     <div class="card-header ch-alt">
       <h2>Margin <small>We can put text here</small></h2>
         </div>
-<iframe width="450" height="250" src="<%= link.url.gsub(/watch\?v=/,"embed/") %>" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="250" src="<%= link.url.gsub(/watch\?v=/,"embed/") %>" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
 <% end %>
-</div>
+
 
 
 
@@ -43,9 +66,13 @@
     <div class="card-header ch-alt">
       <h2>Margin <small>We can put text here</small></h2>
         </div>
-<iframe width="450" height="250" src="<%= link.url %>" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="250" src="<%= link.url %>" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
 <% end %>
-</div>
 
+
+<div id="current_user" style="visibility:hidden;">
+<%= @current_user.name %>
+</div>
+</div>

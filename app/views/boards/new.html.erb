@@ -1,48 +1,128 @@
-<h1 id="clickme">Create a New Board</h1>
+<div class="card">
+    <div class="card-header">
+        <h3 style="text-align: center;" id="clickme">Create a New Board</h3>
+        <%= form_for @board do |f| %>
+      <div style="text-align: center;">
+       <%= f.label :name %>
+       <%= f.text_field :name %>
+        <%= f.hidden_field :user_id, value: @user.id %>
+      </div>
+    </div>  
+</div>
 
-<%= form_for @board do |f| %>
-  <div>
-   <%= f.label :name %>
-   <%= f.text_field :name %>
-    <%= f.hidden_field :user_id, value: @user.id %>
-  </div>
-  <h3> Links </h3>
-    <%= f.fields_for(:links, Link.new) do |link| %>
-    <%= link.label :url %>
-    <%= link.text_field :url %><br>
-    <%= link.hidden_field :kind, :value => 1 %>
-    <% end %>
-    <%= f.fields_for(:links, Link.new) do |link| %>
-    <%= link.label :url %>
-    <%= link.text_field :url %><br>
-    <%= link.hidden_field :kind, :value => 1 %>
-    <% end %>
-    <%= f.fields_for(:links, Link.new) do |link| %>
-    <%= link.label :url %>
-    <%= link.text_field :url %><br>
-    <%= link.hidden_field :kind, :value => 1 %>
-    <% end %>
-    <%= f.fields_for(:links, Link.new) do |link| %>
-    <%= link.label :url %>
-    <%= link.text_field :url %><br>
-    <%= link.hidden_field :kind, :value => 1 %>
-    <% end %>
-    <%= f.fields_for(:links, Link.new) do |link| %>
-    <%= link.label :url %>
-    <%= link.text_field :url %><br>
-    <%= link.hidden_field :kind, :value => 1 %>
-    <% end %>
-    <%= f.fields_for(:links, Link.new) do |link| %>
-    <%= link.label :url %>
-    <%= link.text_field :url %><br>
-    <%= link.hidden_field :kind, :value => 1 %>
-    <% end %>
-  <h3> Tags </h3>
+<div class="card-body card-padding">
+
+
+    <div class="col-sm-4">
+        <div class="card">
+            <div id="header_0" class="card-header ch-alt">
+                <h2 id="desc_text_0">Card 1<small>Description</small></h2>
+            </div>
+            <div style="height:250px;text-align:center;">
+             <button id="button_0" style="margin: -20px -50px;top:50%;left:50%;width:100px;height:100px;visibility:visible"class="btn btn-float waves-effect waves-effect waves-button waves-float"><i class="md md-add"></i></button>
+                <div class="input-sm fg-line" id="show_the_field_0" style="visibility:hidden;margin: -20px -50px;top:50%;left:50%;">
+                    <%= f.fields_for(:links, Link.new) do |link| %>
+                    <%= link.text_field :url, :placeholder => "Paste Your Link Here" %><br>
+                    <%= link.hidden_field :kind, :value => 1 %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+      </div>
+
+    <div class="col-sm-4">
+        <div class="card">
+            <div id="header_1" class="card-header ch-alt">
+                <h2 id="desc_text_1">Card 2<small>Description</small></h2>
+            </div>
+            <div style="height:250px;text-align:center;">
+             <button id="button_1" style="margin: -20px -50px;top:50%;left:50%;width:100px;height:100px;visibility:visible"class="btn btn-float waves-effect waves-effect waves-button waves-float"><i class="md md-add"></i></button>
+                <div class="input-sm fg-line" id="show_the_field_1" style="visibility:hidden;margin: -20px -50px;top:50%;left:50%;">
+                    <%= f.fields_for(:links, Link.new) do |link| %>
+                    <%= link.text_field :url, :placeholder => "Paste Your Link Here" %><br>
+                    <%= link.hidden_field :kind, :value => 1 %>
+                    <% end %>
+                </div>
+            </div>
+         </div>
+      </div>
+
+    <div class="col-sm-4">
+        <div class="card">
+            <div id="header_2" class="card-header ch-alt">
+                <h2 id="desc_text_2">Card 1<small>Description</small></h2>
+            </div>
+            <div style="height:250px;text-align:center;">
+             <button id="button_2" style="margin: -20px -50px;top:50%;left:50%;width:100px;height:100px;visibility:visible"class="btn btn-float waves-effect waves-effect waves-button waves-float"><i class="md md-add"></i></button>
+                <div class="input-sm fg-line" id="show_the_field_2" style="visibility:hidden;margin: -20px -50px;top:50%;left:50%;">
+                    <%= f.fields_for(:links, Link.new) do |link| %>
+                    <%= link.text_field :url, :placeholder => "Paste Your Link Here" %><br>
+                    <%= link.hidden_field :kind, :value => 1 %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card">
+            <div id="header_3" class="card-header ch-alt">
+                <h2 id="desc_text_3">Card 1<small>Description</small></h2>
+            </div>
+            <div style="height:250px;text-align:center;">
+              <button id="button_3" style="margin: -20px -50px;top:50%;left:50%;width:100px;height:100px;visibility:visible"class="btn btn-float waves-effect waves-effect waves-button waves-float"><i class="md md-add"></i></button>
+                <div class="input-sm fg-line" id="show_the_field_3" style="visibility:hidden;margin: -20px -50px;top:50%;left:50%;">
+                    <%= f.fields_for(:links, Link.new) do |link| %>
+                    <%= link.text_field :url, :placeholder => "Paste Your Link Here" %><br>
+                    <%= link.hidden_field :kind, :value => 1 %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card">
+            <div id="header_4" class="card-header ch-alt">
+                <h2 id="desc_text_4">Card 1<small>Description</small></h2>
+            </div>
+            <div style="height:250px;text-align:center;">
+              <button id="button_4" style="margin: -20px -50px;top:50%;left:50%;width:100px;height:100px;visibility:visible"class="btn btn-float waves-effect waves-effect waves-button waves-float"><i class="md md-add"></i></button>
+                <div class="input-sm fg-line" id="show_the_field_4" style="visibility:hidden;margin: -20px -50px;top:50%;left:50%;">
+                    <%= f.fields_for(:links, Link.new) do |link| %>
+                    <%= link.text_field :url, :placeholder => "Paste Your Link Here" %><br>
+                    <%= link.hidden_field :kind, :value => 1 %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card">
+            <div id="header_5" class="card-header ch-alt">
+                <h2 id="desc_text_5">Card 1<small>Description</small></h2>
+            </div>
+            <div style="height:250px;text-align:center;">
+              <button id="button_5" style="margin: -20px -50px;top:50%;left:50%;width:100px;height:100px;visibility:visible"class="btn btn-float waves-effect waves-effect waves-button waves-float"><i class="md md-add"></i></button>
+                <div class="input-sm fg-line" id="show_the_field_5" style="visibility:hidden;margin: -20px -50px;top:50%;left:50%;">
+                    <%= f.fields_for(:links, Link.new) do |link| %>
+                    <%= link.text_field :url, :placeholder => "Paste Your Link Here" %><br>
+                    <%= link.hidden_field :kind, :value => 1 %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3> Tags </h3>
+
     <%= f.fields_for(:tags, Tag.new) do |tag| %>
     <%= tag.label :name %>
     <%= tag.text_field :name %><br>
     <% end %>
-  <%= f.submit %>
+    <%= f.submit %>
+    <% end %>
 
-<% end %>
 
+</div>
