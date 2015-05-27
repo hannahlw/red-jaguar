@@ -65,7 +65,7 @@ $( document ).ready(function() {
       }
       else {
         $('#header_1').attr('class','card-header bgm-black');
-        $('#board_links_attributes_0_kind').attr('value',1)
+        $('#board_links_attributes_1_kind').attr('value',1)
       }
     })
 
@@ -88,7 +88,7 @@ $( document ).ready(function() {
       }
       else {
         $('#header_2').attr('class','card-header bgm-black');
-        $('#board_links_attributes_0_kind').attr('value',1)
+        $('#board_links_attributes_2_kind').attr('value',1)
       }
     })
 
@@ -111,7 +111,7 @@ $( document ).ready(function() {
       }
       else {
         $('#header_3').attr('class','card-header bgm-black');
-        $('#board_links_attributes_0_kind').attr('value',1)
+        $('#board_links_attributes_3_kind').attr('value',1)
       }
     })
 
@@ -134,7 +134,7 @@ $( document ).ready(function() {
       }
       else {
         $('#header_4').attr('class','card-header bgm-black');
-        $('#board_links_attributes_0_kind').attr('value',1)
+        $('#board_links_attributes_4_kind').attr('value',1)
       }
     })
 
@@ -157,7 +157,7 @@ $( document ).ready(function() {
       }
       else {
         $('#header_5').attr('class','card-header bgm-black');
-        $('#board_links_attributes_0_kind').attr('value',1)
+        $('#board_links_attributes_5_kind').attr('value',1)
       }
     })
 
