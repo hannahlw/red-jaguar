@@ -35,6 +35,7 @@ class BoardsController < ApplicationController
     @web_links = @board.links.where(kind: 1)
     @youtube_links = @board.links.where(kind: 2)
     @twitter_links = @board.links.where(kind: 3)
+    @soundcloud_links = @board.links.where(kind: 4)
   end
 
   private

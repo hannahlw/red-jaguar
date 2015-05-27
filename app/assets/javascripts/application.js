@@ -10,8 +10,25 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
-//= require_tree ../../../vendor/assets/javascripts/.
+//= require bootstrap.min
+//= require jquery.flot.min
+//= require jquery.flot.resize.min
+//= require curvedLines
+//= require jquery.sparkline.min
+//= require jquery.easypiechart.min
+//= require moment.min
+//= require jquery.simpleWeather.min
+//= require jquery.autosize.min
+//= require jquery.nicescroll.min
+//= require waves.min
+//= require bootstrap-growl.min
+//= require sweet-alert.min
+//= require curved-line-chart
+//= require line-chart
+//= require charts
+//= require functions
+//= require demo
 //= require_tree .
