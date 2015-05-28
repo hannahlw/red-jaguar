@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   
   post '/filter', :controller => 'boards', :action => 'filter'
 
+  get '/search', :controller => 'boards', :action => 'search'
+
   
   resources :users
 

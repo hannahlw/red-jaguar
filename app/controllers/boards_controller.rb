@@ -18,6 +18,12 @@ class BoardsController < ApplicationController
     redirect_to @board
   end
 
+  def search
+    filter = params[:search_term]
+    @search_term = params[:search_term]
+    @boards = Board.joins(:tags).where('tags.name' => filter).limit(9)
+  end
+
   def index
     @boards = Board.order(views: :desc).limit(9)
   end
