@@ -45,7 +45,6 @@ $( document ).ready(function() {
         $('#board_links_attributes_0_kind').attr('value',1)
       }
     })
-
     $('#board_links_attributes_1_url').on('input', function(){
       if($('#board_links_attributes_1_url').val().match(/youtube.com/)){
         $('#board_links_attributes_1_kind').attr('value',2);
@@ -73,7 +72,7 @@ $( document ).ready(function() {
       if($('#board_links_attributes_2_url').val().match(/youtube.com/)){
         $('#board_links_attributes_2_kind').attr('value',2);
         $('#header_2').attr('class','card-header bgm-red');
-      }
+      }    
       else if($('#board_links_attributes_2_url').val().match(/twitter.com/)){
         $('#board_links_attributes_2_kind').attr('value',3)
         $('#header_2').attr('class','card-header bgm-blue');
@@ -91,7 +90,6 @@ $( document ).ready(function() {
         $('#board_links_attributes_2_kind').attr('value',1)
       }
     })
-
     $('#board_links_attributes_3_url').on('input', function(){
       if($('#board_links_attributes_3_url').val().match(/youtube.com/)){
         $('#board_links_attributes_3_kind').attr('value',2);
@@ -142,7 +140,7 @@ $( document ).ready(function() {
       if($('#board_links_attributes_5_url').val().match(/youtube.com/)){
         $('#board_links_attributes_5_kind').attr('value',2);
         $('#header_5').attr('class','card-header bgm-red');
-      }
+      }     
       else if($('#board_links_attributes_5_url').val().match(/twitter.com/)){
         $('#board_links_attributes_5_kind').attr('value',3)
         $('#header_5').attr('class','card-header bgm-blue');
@@ -251,7 +249,13 @@ $( document ).ready(function() {
 
 
 
-
+    $('.click-for-text').click(function(event){
+      event.preventDefault();
+      $('#button_0').slideUp();
+      $('#show_the_field_0').attr('style','visibility: visible;padding-top:100px;')
+      $('#board_links_attributes_0_url').attr("placeholder", "Type Your Note Here!")
+      //$('.thing-to-select').attr("cols", "70").attr("rows", "3")
+    })
 
 
 

@@ -68,6 +68,18 @@
     <% end %>
 
 
+    <% @text.each do |link| %>
+      <div class="col-sm-4">                     
+        <div class="card">
+          <div class="card-header ch-alt">
+            <h2>Margin <small>We can put text here</small></h2>
+          </div>
+        <textarea style="resize: none; width:100%; height:250px;"><%= link.url %></textarea>
+      </div>
+    </div>
+    <% end %>
+
+
     <div id="current_user" style="visibility:hidden;">
       <%= @current_user.name %>
     </div>
