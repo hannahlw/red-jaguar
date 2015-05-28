@@ -314,7 +314,18 @@ $( document ).ready(function() {
     })
 
 
-
+//search function
+    $('#search-submit').click(function(event){
+      // event.preventDefault();
+      var url = window.location.href + "search";
+      $.ajax({
+      type: 'POST',
+      url: url,
+      success: function(results){
+      },
+      dataType: 'JSON'
+    })
+    })
 
 
 
