@@ -31,4 +31,5 @@
 //= require charts
 //= require functions
 //= require demo
+//= require jquery.embedly-3.1.1.min.js
 //= require_tree .
