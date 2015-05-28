@@ -161,7 +161,12 @@ $( document ).ready(function() {
       }
     })
 
-    
+
+    // $('p a').embedly({
+    // key: '741dc243a6a64724b3e8e186e8cc0fca',
+    // query: {maxwidth:530} });
+
+
 
     $.getJSON('http://soundcloud.com/oembed?callback=?',
     {format: 'js', url: $('iframe#soundcloud_0').attr('src'), iframe: true, maxheight: 250, show_comments: false},

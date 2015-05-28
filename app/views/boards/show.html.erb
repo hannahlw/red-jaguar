@@ -54,17 +54,24 @@
         </div>
       </div>
     <% end %>
+  
+<!--   <p>
+    <a href="http://instagram.com/p/TwWnNSIXRo/">http://instagram.com/p/TwWnNSIXRo/</a>
+  </p> -->
 
 
+
+    <% i = 0 %>
     <% @web_links.each do |link| %>
       <div class="col-sm-4">                     
         <div class="card">
           <div class="card-header ch-alt">
             <h2>Margin <small>We can put text here</small></h2>
           </div>
-        <iframe width="100%" height="250" src="<%= link.url %>" frameborder="0" allowfullscreen></iframe>
+        <iframe id="web_content_<%=i%>" width="100%" height="250" src="<%= link.url %>" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
+    <% i += 1 %>
     <% end %>
 
 
@@ -73,3 +80,5 @@
     </div>
 
   </div>
+
+
