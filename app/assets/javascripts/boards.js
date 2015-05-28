@@ -161,10 +161,64 @@ $( document ).ready(function() {
       }
     })
 
+//embedly convert regular weblinks
 
-    // $('p a').embedly({
-    // key: '741dc243a6a64724b3e8e186e8cc0fca',
-    // query: {maxwidth:530} });
+    $('#web_link_0 a').embedly({
+      key: '741dc243a6a64724b3e8e186e8cc0fca',
+      query: {maxheight:250} 
+    });
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_0 > div > iframe').attr('width', '100%');
+    }, 300);
+
+    $('#web_link_1 a').embedly({
+      key: '741dc243a6a64724b3e8e186e8cc0fca',
+      query: {maxheight:250} 
+    });
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_1 > div > iframe').attr('width', '100%');
+    }, 300);
+
+    $('#web_link_2 a').embedly({
+      key: '741dc243a6a64724b3e8e186e8cc0fca',
+      query: {maxheight:250} 
+    });
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_2 > div > iframe').attr('width', '100%');
+    }, 300);
+
+    $('#web_link_3 a').embedly({
+      key: '741dc243a6a64724b3e8e186e8cc0fca',
+      query: {maxheight:250} 
+    });
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_3 > div > iframe').attr('width', '100%');
+    }, 300);
+
+    $('#web_link_4 a').embedly({
+      key: '741dc243a6a64724b3e8e186e8cc0fca',
+      query: {maxheight:250} 
+    });
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_4 > div > iframe').attr('width', '100%');
+    }, 300);
+
+    $('#web_link_5 a').embedly({
+      key: '741dc243a6a64724b3e8e186e8cc0fca',
+      query: {maxheight:250} 
+    });
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_5 > div > iframe').attr('width', '100%');
+    }, 300);
+
+
+
 
 
 
