@@ -1,6 +1,6 @@
 $( document ).ready(function() {
   
-  $('div#genre-pick').click(function(event){
+  $('button#genre-picker').click(function(event){
     var data = {filter_by: this.textContent};
     var url = window.location.href + "filter";
     
