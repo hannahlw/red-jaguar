@@ -20,6 +20,7 @@ class BoardsController < ApplicationController
 
   def index
     @boards = Board.joins(:tags).where('tags.name' => "Pop Culture").limit(9)
+    @boards = Board.order(views: :desc).limit(9)
   end
 
   def filter

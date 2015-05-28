@@ -218,10 +218,15 @@ $( document ).ready(function() {
     }, 300);
 
 
+//color index page buttons
+    $('.index_button_1').attr('class', 'btn btn-default waves-effect waves-button waves-float')
+    $('.index_button_2').attr('class', 'btn btn-danger waves-effect waves-button waves-float')
+    $('.index_button_3').attr('class', 'btn btn-info waves-effect waves-button waves-float')
+    $('.index_button_4').attr('class', 'btn btn-warning waves-effect waves-button waves-float')
+    $('.index_button_5').attr('class', 'btn btn-success waves-effect waves-button waves-float')
 
 
-
-
+//format soundcloud
     $.getJSON('http://soundcloud.com/oembed?callback=?',
     {format: 'js', url: $('iframe#soundcloud_0').attr('src'), iframe: true, maxheight: 250, show_comments: false},
     function(data) {
@@ -271,7 +276,7 @@ $( document ).ready(function() {
         $('#soundcloud_5').replaceWith(formattedMusic)
     })
 
-
+//show link input field on button click
     $('#button_0').click(function(event){
       event.preventDefault();
       $('#button_0').slideUp();

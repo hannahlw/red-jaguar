@@ -18,6 +18,22 @@
 
 
 </div>
+<% i = 0 %>
+<% @boards.each do |board|%>
+    <div class="col-sm-4">
+        <div class="card">
+            <div id="header_0" class="card-header ch-alt">
+                <h2 id="desc_text_0"><%= board.name %><small>By <%= board.user.name%></small></h2>
+            </div>
+            <div style="height:250px;text-align:left;padding-top:10%;">
+            <div style="height:80%;width:90%;margin-left:12%;">
+                <% board.links.each do |link| %>
+                <button class="index_button_<%=link.kind%>" style="height:32%;width:26%;margin-bottom:0.9em;margin-right:0.6em;"class="btn btn-danger waves-effect waves-button waves-float"><i class="">  </i></button>
+                <% end %>
+            </div>
 
-
+            </div>
+        </div>
+      </div>
+<% end %>
 
