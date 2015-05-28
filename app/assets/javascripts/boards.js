@@ -249,7 +249,8 @@ $( document ).ready(function() {
 
 
 
-    $('.click-for-text').click(function(event){
+    $('#text-button').click(function(event){
+      //debugger;
       event.preventDefault();
       $('#button_0').slideUp();
       $('#show_the_field_0').attr('style','visibility: visible;padding-top:100px;')
