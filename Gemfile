@@ -40,6 +40,8 @@ group :development, :test do
 
   #devise for user log-in
   gem 'devise'
+
+  gem 'figaro'
 end
 
 group :test, :development do
