@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default card-header bgm-bluegray">
  <div class="container-fluid">
    <div class="navbar-header">
      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -7,15 +7,15 @@
        <span class="icon-bar"></span>
        <span class="icon-bar"></span>
      </button>
-     <a class="navbar-brand" <%= link_to "Placemat", root_path %> </a>
+     <a style="color: white;"class="navbar-brand" <%= link_to "Placemat", root_path %> </a>
    </div>
 
    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
      <ul class="nav navbar-nav">
        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-       <li><a href="#">Link</a></li>
+       <li><a style="color: white;" href="#">Link</a></li>
        <li class="dropdown">
-         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+         <a style="color: white;"href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
          <ul class="dropdown-menu" role="menu">
            <li><a href="#">Action</a></li>
            <li><a href="#">Another action</a></li>
@@ -31,20 +31,19 @@
        <div class="form-group">
         <%=form_tag('/search', method: "get") do%>
           <%= text_field_tag(:search_term) %>
-        <%= submit_tag("Search") %>
+        <%= submit_tag "Search" %>
        <%end%>
        </div>
 
 
      <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in?  %>
-      <li><%=link_to('Logout', destroy_user_session_path, :method => :delete) %> </li>
+      <li><a style="color: white;"<%=link_to('Logout', destroy_user_session_path, :method => :delete) %></a> </li>
       <% else %>
-      <li><%= link_to('Sign-Up', new_user_registration_path)  %> </li>
-       <li><%= link_to('Login', new_user_session_path)  %> </li>
-      <% end %>
-
-      <li> <%= link_to "Create a New Board", new_board_path %> </li>
+      <li><a style="color: white;"<%= link_to('Sign-Up', new_user_registration_path)  %></a> </li>
+       <li><a style="color: white;"<%= link_to('Login', new_user_session_path)  %></a> </li>
+      <% end %> 
+      <li><a style="color: white;" <%= link_to "Create a New Board", new_board_path %></a> </li> 
      </ul>
    </div>
  </div>

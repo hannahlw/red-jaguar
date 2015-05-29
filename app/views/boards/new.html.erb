@@ -9,20 +9,36 @@
       </div>
     </div>  
 </div>
-
+    <!-- <h3> Give Your Board a Tag: </h3> -->
+    <%= f.fields_for(:tags, Tag.new) do |tag| %>
+    <%= tag.label :name, "Give Your Board a Tag:", style:"
+    font-size: 1.5em;" %>
+    <%= tag.text_field :name %><br>
+    <br>
+    <% end %>
 <div class="card-body card-padding">
-
-
     <div class="col-sm-4">
         <div class="card">
             <div id="header_0" class="card-header ch-alt">
-                <h2 id="desc_text_0">Card 1<small>Description</small></h2>
+                <h2 id="desc_text_0">Card 1<small>Description</small></h2> <ul class="actions ">  
+                    <a>
+                        <i class="md md-create"></i> 
+                    </a>       
+                </ul>
+            </div>
+            <!-- Add A Note Button -->
+            <div style="margin-left: 400px; margin-top: 20px;">
+                <ul class="actions " float="right">  
+                    <a id="text-button">
+                        <i class="md md-format-color-text"></i> 
+                    </a>       
+                </ul>
             </div>
             <div style="height:250px;text-align:center;">
              <button id="button_0" style="margin: -20px -50px;top:50%;left:50%;width:100px;height:100px;visibility:visible"class="btn btn-float waves-effect waves-effect waves-button waves-float"><i class="md md-add"></i></button>
                 <div class="input-sm fg-line" id="show_the_field_0" style="visibility:hidden;margin: -20px -50px;top:50%;left:50%;">
                     <%= f.fields_for(:links, Link.new) do |link| %>
-                    <%= link.text_field :url, :placeholder => "Paste Your Link Here" %><br>
+                    <%= link.text_field :url, :placeholder => "Paste Your Link Here", class: "thing-to-select" %><br>
                     <%= link.hidden_field :kind, :value => 1 %>
                     <% end %>
                 </div>
@@ -34,6 +50,19 @@
         <div class="card">
             <div id="header_1" class="card-header ch-alt">
                 <h2 id="desc_text_1">Card 2<small>Description</small></h2>
+                <ul class="actions ">  
+                    <a>
+                        <i class="md md-create"></i> 
+                    </a>       
+                </ul>
+            </div>
+            <!-- Add A Note Button -->
+            <div style="margin-left: 400px; margin-top: 20px;">
+                <ul class="actions " float="right">  
+                    <a id="text-button">
+                        <i class="md md-format-color-text"></i> 
+                    </a>       
+                </ul>
             </div>
             <div style="height:250px;text-align:center;">
              <button id="button_1" style="margin: -20px -50px;top:50%;left:50%;width:100px;height:100px;visibility:visible"class="btn btn-float waves-effect waves-effect waves-button waves-float"><i class="md md-add"></i></button>
@@ -51,6 +80,19 @@
         <div class="card">
             <div id="header_2" class="card-header ch-alt">
                 <h2 id="desc_text_2">Card 1<small>Description</small></h2>
+                <ul class="actions ">  
+                    <a>
+                        <i class="md md-create"></i> 
+                    </a>       
+                </ul>
+            </div>
+            <!-- Add A Note Button -->
+            <div style="margin-left: 400px; margin-top: 20px;">
+                <ul class="actions " float="right">  
+                    <a id="text-button">
+                        <i class="md md-format-color-text"></i> 
+                    </a>       
+                </ul>
             </div>
             <div style="height:250px;text-align:center;">
              <button id="button_2" style="margin: -20px -50px;top:50%;left:50%;width:100px;height:100px;visibility:visible"class="btn btn-float waves-effect waves-effect waves-button waves-float"><i class="md md-add"></i></button>
@@ -68,6 +110,19 @@
         <div class="card">
             <div id="header_3" class="card-header ch-alt">
                 <h2 id="desc_text_3">Card 1<small>Description</small></h2>
+                <ul class="actions ">  
+                    <a>
+                        <i class="md md-create"></i> 
+                    </a>       
+                </ul>
+            </div>
+            <!-- Add A Note Button -->
+            <div style="margin-left: 400px; margin-top: 20px;">
+                <ul class="actions " float="right">  
+                    <a id="text-button">
+                        <i class="md md-format-color-text"></i> 
+                    </a>       
+                </ul>
             </div>
             <div style="height:250px;text-align:center;">
               <button id="button_3" style="margin: -20px -50px;top:50%;left:50%;width:100px;height:100px;visibility:visible"class="btn btn-float waves-effect waves-effect waves-button waves-float"><i class="md md-add"></i></button>
@@ -85,6 +140,19 @@
         <div class="card">
             <div id="header_4" class="card-header ch-alt">
                 <h2 id="desc_text_4">Card 1<small>Description</small></h2>
+                <ul class="actions ">  
+                    <a>
+                        <i class="md md-create"></i> 
+                    </a>       
+                </ul>
+            </div>
+            <!-- Add A Note Button -->
+            <div style="margin-left: 400px; margin-top: 20px;">
+                <ul class="actions " float="right">  
+                    <a id="text-button">
+                        <i class="md md-format-color-text"></i> 
+                    </a>       
+                </ul>
             </div>
             <div style="height:250px;text-align:center;">
               <button id="button_4" style="margin: -20px -50px;top:50%;left:50%;width:100px;height:100px;visibility:visible"class="btn btn-float waves-effect waves-effect waves-button waves-float"><i class="md md-add"></i></button>
@@ -102,6 +170,19 @@
         <div class="card">
             <div id="header_5" class="card-header ch-alt">
                 <h2 id="desc_text_5">Card 1<small>Description</small></h2>
+                <ul class="actions ">  
+                    <a>
+                        <i class="md md-create"></i> 
+                    </a>       
+                </ul>
+            </div>
+            <!-- Add A Note Button -->
+            <div style="margin-left: 400px; margin-top: 20px;">
+                <ul class="actions " float="right">  
+                    <a id="text-button">
+                        <i class="md md-format-color-text"></i> 
+                    </a>       
+                </ul>
             </div>
             <div style="height:250px;text-align:center;">
               <button id="button_5" style="margin: -20px -50px;top:50%;left:50%;width:100px;height:100px;visibility:visible"class="btn btn-float waves-effect waves-effect waves-button waves-float"><i class="md md-add"></i></button>
@@ -115,13 +196,11 @@
         </div>
     </div>
 
-    <h3> Tags </h3>
+    
 
-    <%= f.fields_for(:tags, Tag.new) do |tag| %>
-    <%= tag.label :name %>
-    <%= tag.text_field :name %><br>
-    <% end %>
+    <!-- <div style="font-size: 1.5em; margin-left: 50%;">   -->
     <%= f.submit %>
+    <!-- </div>   -->
     <% end %>
 
 

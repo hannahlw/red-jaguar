@@ -327,6 +327,14 @@ $( document ).ready(function() {
     })
     })
 
+      $('#text-button').click(function(event){
+      //debugger;
+      event.preventDefault();
+      $('#button_0').slideUp();
+      $('#show_the_field_0').attr('style','visibility: visible;padding-top:100px;')
+      $('#board_links_attributes_0_url').attr("placeholder", "Type Your Note Here!")
+      //$('.thing-to-select').attr("cols", "70").attr("rows", "3")
+    })
 
 
 
