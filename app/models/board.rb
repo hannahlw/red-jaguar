@@ -7,6 +7,8 @@ class Board < ActiveRecord::Base
   accepts_nested_attributes_for :links
   accepts_nested_attributes_for :tags
 
+  validates :name, presence: true
+  
   def increment(by = 1)
     self.views ||= 0
     self.views += by

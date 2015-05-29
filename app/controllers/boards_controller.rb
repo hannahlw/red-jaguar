@@ -7,6 +7,7 @@ class BoardsController < ApplicationController
   end
 
   def create
+    
     hash = board_params["links_attributes"]
     valid_links = hash.reject{|k, v| v["url"] == ""}
     final_hash = {}
@@ -15,6 +16,8 @@ class BoardsController < ApplicationController
     final_hash["links_attributes"] = valid_links
     final_hash["tags_attributes"] = board_params["tags_attributes"]
     @board = Board.create(final_hash)
+   
+    #binding.pry
     redirect_to @board
   end
 

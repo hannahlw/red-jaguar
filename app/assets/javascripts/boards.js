@@ -327,16 +327,56 @@ $( document ).ready(function() {
     })
     })
 
-      $('#text-button').click(function(event){
-      //debugger;
+
+  // Button For Writing Text
+
+      $('#text-button_0').click(function(event){
       event.preventDefault();
       $('#button_0').slideUp();
+      //debugger;
       $('#show_the_field_0').attr('style','visibility: visible;padding-top:100px;')
-      $('#board_links_attributes_0_url').attr("placeholder", "Type Your Note Here!")
-      //$('.thing-to-select').attr("cols", "70").attr("rows", "3")
-    })
-
-
-
+      $('#board_links_attributes_0_url').attr({placeholder:"Type Your Note Here!", class:"fg-line form-control", style:"padding-top:10px;"})
+      //$('#header_0').attr('class','card-header bgm-green'); 
+    });
+      $('#text-button_1').click(function(event){
+      event.preventDefault();
+      $('#button_1').slideUp();
+      //debugger;
+      $('#show_the_field_1').attr('style','visibility: visible;padding-top:100px;')
+      $('#board_links_attributes_1_url').attr({placeholder:"Type Your Note Here!", class:"fg-line form-control", style:"padding-top:10px;"})
+      //$('#header_1').attr('class','card-header bgm-green');  
+    });
+      $('#text-button_2').click(function(event){
+      event.preventDefault();
+      $('#button_2').slideUp();
+      //debugger;
+      $('#show_the_field_2').attr('style','visibility: visible;padding-top:100px;')
+      $('#board_links_attributes_2_url').attr({placeholder:"Type Your Note Here!", class:"fg-line form-control", style:"padding-top:10px;"})
+      //$('#header_2').attr('class','card-header bgm-green');  
+    });
+      $('#text-button_3').click(function(event){
+      event.preventDefault();
+      $('#button_3').slideUp();
+      //debugger;
+      $('#show_the_field_3').attr('style','visibility: visible;padding-top:100px;')
+      $('#board_links_attributes_3_url').attr({placeholder:"Type Your Note Here!", class:"fg-line form-control", style:"padding-top:10px;"})
+      //$('#header_3').attr('class','card-header bgm-green'); 
+      });
+      $('#text-button_4').click(function(event){
+      event.preventDefault();
+      $('#button_4').slideUp();
+      //debugger;
+      $('#show_the_field_4').attr('style','visibility: visible;padding-top:100px;')
+      $('#board_links_attributes_4_url').attr({placeholder:"Type Your Note Here!", class:"fg-line form-control", style:"padding-top:10px;"})
+      //$('#header_4').attr('class','card-header bgm-green'); 
+      });
+      $('#text-button_5').click(function(event){
+      event.preventDefault();
+      $('#button_5').slideUp();
+      //debugger;
+      $('#show_the_field_5').attr('style','visibility: visible;padding-top:100px;')
+      $('#board_links_attributes_5_url').attr({placeholder:"Type Your Note Here!", class:"fg-line form-control", style:"padding-top:10px;"})
+      //$('#header_5').attr('class','card-header bgm-green');
+      });
 
 });

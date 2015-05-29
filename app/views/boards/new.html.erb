@@ -4,18 +4,20 @@
         <%= form_for @board do |f| %>
       <div style="text-align: center;">
        <%= f.label :name %>
-       <%= f.text_field :name %>
+       <%= f.text_field :name, required: true %>
         <%= f.hidden_field :user_id, value: @user.id %>
       </div>
-    </div>  
+    </div> 
 </div>
-    <!-- <h3> Give Your Board a Tag: </h3> -->
+
+  <!-- <h3> Give Your Board a Tag: </h3> -->
     <%= f.fields_for(:tags, Tag.new) do |tag| %>
     <%= tag.label :name, "Give Your Board a Tag:", style:"
     font-size: 1.5em;" %>
     <%= tag.text_field :name %><br>
     <br>
-    <% end %>
+    <% end %> 
+    
 <div class="card-body card-padding">
     <div class="col-sm-4">
         <div class="card">
@@ -29,7 +31,7 @@
             <!-- Add A Note Button -->
             <div style="margin-left: 400px; margin-top: 20px;">
                 <ul class="actions " float="right">  
-                    <a id="text-button">
+                    <a id="text-button_0">
                         <i class="md md-format-color-text"></i> 
                     </a>       
                 </ul>
@@ -38,7 +40,7 @@
              <button id="button_0" style="margin: -20px -50px;top:50%;left:50%;width:100px;height:100px;visibility:visible"class="btn btn-float waves-effect waves-effect waves-button waves-float"><i class="md md-add"></i></button>
                 <div class="input-sm fg-line" id="show_the_field_0" style="visibility:hidden;margin: -20px -50px;top:50%;left:50%;">
                     <%= f.fields_for(:links, Link.new) do |link| %>
-                    <%= link.text_field :url, :placeholder => "Paste Your Link Here", class: "thing-to-select" %><br>
+                    <%= link.text_field :url, :placeholder => "Paste Your Link Here" %><br>
                     <%= link.hidden_field :kind, :value => 1 %>
                     <% end %>
                 </div>
@@ -59,7 +61,7 @@
             <!-- Add A Note Button -->
             <div style="margin-left: 400px; margin-top: 20px;">
                 <ul class="actions " float="right">  
-                    <a id="text-button">
+                    <a id="text-button_1">
                         <i class="md md-format-color-text"></i> 
                     </a>       
                 </ul>
@@ -89,7 +91,7 @@
             <!-- Add A Note Button -->
             <div style="margin-left: 400px; margin-top: 20px;">
                 <ul class="actions " float="right">  
-                    <a id="text-button">
+                    <a id="text-button_2">
                         <i class="md md-format-color-text"></i> 
                     </a>       
                 </ul>
@@ -119,7 +121,7 @@
             <!-- Add A Note Button -->
             <div style="margin-left: 400px; margin-top: 20px;">
                 <ul class="actions " float="right">  
-                    <a id="text-button">
+                    <a id="text-button_3">
                         <i class="md md-format-color-text"></i> 
                     </a>       
                 </ul>
@@ -149,7 +151,7 @@
             <!-- Add A Note Button -->
             <div style="margin-left: 400px; margin-top: 20px;">
                 <ul class="actions " float="right">  
-                    <a id="text-button">
+                    <a id="text-button_4">
                         <i class="md md-format-color-text"></i> 
                     </a>       
                 </ul>
@@ -179,7 +181,7 @@
             <!-- Add A Note Button -->
             <div style="margin-left: 400px; margin-top: 20px;">
                 <ul class="actions " float="right">  
-                    <a id="text-button">
+                    <a id="text-button_5">
                         <i class="md md-format-color-text"></i> 
                     </a>       
                 </ul>
@@ -198,9 +200,9 @@
 
     
 
-    <!-- <div style="font-size: 1.5em; margin-left: 50%;">   -->
+     
     <%= f.submit %>
-    <!-- </div>   -->
+    
     <% end %>
 
 
