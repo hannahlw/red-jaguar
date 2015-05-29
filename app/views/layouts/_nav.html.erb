@@ -11,7 +11,7 @@
      <a style="color: white;"class="navbar-brand" <%= link_to "Placemat", root_path %> </a>
    </div>
 
-   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-bottom: -40px">
      <ul class="nav navbar-nav">
        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
        <li><a style="color: white;" href="#">Link</a></li>
@@ -38,11 +38,10 @@
       <li><a style="color: white;" <%= link_to "Create a New Board", new_board_path %></a> </li> 
      </ul>
 
- 
-       <div class="form-group" style="margin-top: 5px;">
+       <div class="form-group" >
         <%=form_tag('/search', method: "get") do%>
           <%= text_field_tag(:search_term) %>
-        <%= submit_tag "Search", class: "btn btn-primary btn-sm m-t-10 waves-effect waves-button waves-float" %>
+        <%= button_tag "Search", class: "btn btn-primary btn-sm m-t-10 waves-effect waves-button waves-float", style: "margin-bottom: 20px;" %>
        <%end%>
        </div>
 
