@@ -41,7 +41,7 @@ $( document ).ready(function() {
         $('#header_0').attr('class','card-header bgm-green');
       }
       else {
-        $('#header_0').attr('class','card-header bgm-black');
+        $('#header_0').attr('class','card-header bgm-indigo');
         $('#board_links_attributes_0_kind').attr('value',1)
       }
     })
@@ -64,7 +64,7 @@ $( document ).ready(function() {
         $('#header_1').attr('class','card-header bgm-green');
       }
       else {
-        $('#header_1').attr('class','card-header bgm-black');
+        $('#header_1').attr('class','card-header bgm-indigo');
         $('#board_links_attributes_1_kind').attr('value',1)
       }
     })
@@ -87,7 +87,7 @@ $( document ).ready(function() {
         $('#header_2').attr('class','card-header bgm-green');
       }
       else {
-        $('#header_2').attr('class','card-header bgm-black');
+        $('#header_2').attr('class','card-header bgm-indigo');
         $('#board_links_attributes_2_kind').attr('value',1)
       }
     })
@@ -110,7 +110,7 @@ $( document ).ready(function() {
         $('#header_3').attr('class','card-header bgm-green');
       }
       else {
-        $('#header_3').attr('class','card-header bgm-black');
+        $('#header_3').attr('class','card-header bgm-indigo');
         $('#board_links_attributes_3_kind').attr('value',1)
       }
     })
@@ -133,7 +133,7 @@ $( document ).ready(function() {
         $('#header_4').attr('class','card-header bgm-green');
       }
       else {
-        $('#header_4').attr('class','card-header bgm-black');
+        $('#header_4').attr('class','card-header bgm-indigo');
         $('#board_links_attributes_4_kind').attr('value',1)
       }
     })
@@ -156,75 +156,142 @@ $( document ).ready(function() {
         $('#header_5').attr('class','card-header bgm-green');
       }
       else {
-        $('#header_5').attr('class','card-header bgm-black');
+        $('#header_5').attr('class','card-header bgm-indigo');
         $('#board_links_attributes_5_kind').attr('value',1)
       }
     })
 
-//embedly convert regular weblinks
-
-    $('#web_link_0 a').embedly({
-      key: '<%= ENV['EMBEDLY_KEY'] %>',
-      query: {maxheight:250} 
-    });
     
+//format embedly iframes in cascade to adjust for slow loading times
     setTimeout(function changeIframeWidth(){
-      $('#web_link_0 > div > iframe').attr('width', '100%');
+      $('#web_link_0 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
     }, 300);
 
-    $('#web_link_1 a').embedly({
-      key: '<%= ENV['EMBEDLY_KEY'] %>',
-      query: {maxheight:250} 
-    });
 
     setTimeout(function changeIframeWidth(){
-      $('#web_link_1 > div > iframe').attr('width', '100%');
+      $('#web_link_1 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
     }, 300);
 
-    $('#web_link_2 a').embedly({
-      key: '<%= ENV['EMBEDLY_KEY'] %>',
-      query: {maxheight:250} 
-    });
 
     setTimeout(function changeIframeWidth(){
-      $('#web_link_2 > div > iframe').attr('width', '100%');
+      $('#web_link_2 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
     }, 300);
 
-    $('#web_link_3 a').embedly({
-      key: '<%= ENV['EMBEDLY_KEY'] %>',
-      query: {maxheight:250} 
-    });
 
     setTimeout(function changeIframeWidth(){
-      $('#web_link_3 > div > iframe').attr('width', '100%');
+      $('#web_link_3 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
     }, 300);
 
-    $('#web_link_4 a').embedly({
-      key: '<%= ENV['EMBEDLY_KEY'] %>',
-      query: {maxheight:250} 
-    });
 
     setTimeout(function changeIframeWidth(){
-      $('#web_link_4 > div > iframe').attr('width', '100%');
+      $('#web_link_4 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
     }, 300);
 
-    $('#web_link_5 a').embedly({
-      key: '<%= ENV['EMBEDLY_KEY'] %>',
-      query: {maxheight:250} 
-    });
 
     setTimeout(function changeIframeWidth(){
-      $('#web_link_5 > div > iframe').attr('width', '100%');
+      $('#web_link_5 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
     }, 300);
+
+        setTimeout(function changeIframeWidth(){
+      $('#web_link_0 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 600);
+
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_1 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 600);
+
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_2 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 600);
+
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_3 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 600);
+
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_4 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 600);
+
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_5 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 600);
+
+            setTimeout(function changeIframeWidth(){
+      $('#web_link_0 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 1000);
+
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_1 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 1000);
+
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_2 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 1000);
+
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_3 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 1000);
+
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_4 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 1000);
+
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_5 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 1000);
+
+                setTimeout(function changeIframeWidth(){
+      $('#web_link_0 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 5000);
+
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_1 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 5000);
+
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_2 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 5000);
+
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_3 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 5000);
+
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_4 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 5000);
+
+
+    setTimeout(function changeIframeWidth(){
+      $('#web_link_5 > iframe').attr('style', 'border: none; position: relative; visibility: visible; display: block; margin: 10px auto; max-width: 99%;height:100%;').attr('scrolling','yes');
+    }, 5000);
 
 
 //color index page buttons
-    $('.index_button_1').attr('class', 'btn btn-default waves-effect waves-button waves-float')
+    $('.index_button_1').attr('class', 'btn bgm-indigo waves-effect waves-button waves-float')
     $('.index_button_2').attr('class', 'btn btn-danger waves-effect waves-button waves-float')
     $('.index_button_3').attr('class', 'btn btn-info waves-effect waves-button waves-float')
     $('.index_button_4').attr('class', 'btn btn-warning waves-effect waves-button waves-float')
     $('.index_button_5').attr('class', 'btn btn-success waves-effect waves-button waves-float')
 
+//dynamically generate color show page card headers
+    $('.kind_1').attr('class', 'card-header bgm-indigo')
+    $('.kind_2').attr('class', 'card-header bgm-red')
+    $('.kind_3').attr('class', 'card-header bgm-blue')
+    $('.kind_4').attr('class', 'card-header bgm-orange')
 
 
 //show link input field on button click
