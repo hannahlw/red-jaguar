@@ -46,10 +46,7 @@ class BoardsController < ApplicationController
   def show
     @board = Board.find(params[:id])
     @board.increment
-    @youtube_links = @board.links.where(kind: 2)
-    @twitter_links = @board.links.where(kind: 3)
-    @soundcloud_links = @board.links.where(kind: 4)
-    @web_links = @board.links.where(kind: 1)
+    @web_links = @board.links.where(kind: [1,2,3,4]) 
     @text = @board.links.where(kind: 5)
     @current_user = current_user
   end

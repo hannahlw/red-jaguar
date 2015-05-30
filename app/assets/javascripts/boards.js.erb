@@ -226,55 +226,6 @@ $( document ).ready(function() {
     $('.index_button_5').attr('class', 'btn btn-success waves-effect waves-button waves-float')
 
 
-//format soundcloud
-    $.getJSON('http://soundcloud.com/oembed?callback=?',
-    {format: 'js', url: $('iframe#soundcloud_0').attr('src'), iframe: true, maxheight: 250, show_comments: false},
-    function(data) {
-        // Stick the html content returned in the object into the page
-        var formattedMusic = data['html']
-        $('#soundcloud_0').replaceWith(formattedMusic)
-    })
-
-    $.getJSON('http://soundcloud.com/oembed?callback=?',
-    {format: 'js', url: $('iframe#soundcloud_1').attr('src'), iframe: true, maxheight: 250, show_comments: false},
-    function(data) {
-        // Stick the html content returned in the object into the page
-        var formattedMusic = data['html']
-        $('#soundcloud_1').replaceWith(formattedMusic)
-    })
-
-
-        $.getJSON('http://soundcloud.com/oembed?callback=?',
-    {format: 'js', url: $('iframe#soundcloud_2').attr('src'), iframe: true, maxheight: 250, show_comments: false},
-    function(data) {
-        // Stick the html content returned in the object into the page
-        var formattedMusic = data['html']
-        $('#soundcloud_2').replaceWith(formattedMusic)
-    })
-
-        $.getJSON('http://soundcloud.com/oembed?callback=?',
-    {format: 'js', url: $('iframe#soundcloud_3').attr('src'), iframe: true, maxheight: 250, show_comments: false},
-    function(data) {
-        // Stick the html content returned in the object into the page
-        var formattedMusic = data['html']
-        $('#soundcloud_3').replaceWith(formattedMusic)
-    })
-
-        $.getJSON('http://soundcloud.com/oembed?callback=?',
-    {format: 'js', url: $('iframe#soundcloud_4').attr('src'), iframe: true, maxheight: 250, show_comments: false},
-    function(data) {
-        // Stick the html content returned in the object into the page
-        var formattedMusic = data['html']
-        $('#soundcloud_4').replaceWith(formattedMusic)
-    })
-
-        $.getJSON('http://soundcloud.com/oembed?callback=?',
-    {format: 'js', url: $('iframe#soundcloud_5').attr('src'), iframe: true, maxheight: 250, show_comments: false},
-    function(data) {
-        // Stick the html content returned in the object into the page
-        var formattedMusic = data['html']
-        $('#soundcloud_5').replaceWith(formattedMusic)
-    })
 
 //show link input field on button click
     $('#button_0').click(function(event){
