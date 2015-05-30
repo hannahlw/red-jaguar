@@ -23,6 +23,7 @@ $( document ).ready(function() {
     })
   })
 
+//parse input of url, assign kind to link and dynamically change header color 
     $('#board_links_attributes_0_url').on('input', function(){
       if($('#board_links_attributes_0_url').val().match(/youtube.com/)){
         $('#board_links_attributes_0_kind').attr('value',2);
@@ -331,6 +332,102 @@ $( document ).ready(function() {
       $('#show_the_field_5').attr('style','visibility: visible;padding-top:100px;')
     })
 
+//count characters left in input field
+    $('#desc_text_0 > small > input').keyup(function () {
+    var left = 35 - $(this).val().length;
+    if (left < 0) {
+        left = 0;
+    }
+    $('#counter_0').text(left);
+    });
+
+    $('#desc_text_0 > input').keyup(function () {
+    var left = 25 - $(this).val().length;
+    if (left < 0) {
+        left = 0;
+    }
+    $('#counter_0').text(left);
+    });
+
+    $('#desc_text_1 > small > input').keyup(function () {
+    var left = 35 - $(this).val().length;
+    if (left < 0) {
+        left = 0;
+    }
+    $('#counter_1').text(left);
+    });
+
+    $('#desc_text_1 > input').keyup(function () {
+    var left = 25 - $(this).val().length;
+    if (left < 0) {
+        left = 0;
+    }
+    $('#counter_1').text(left);
+    });
+
+    $('#desc_text_2 > small > input').keyup(function () {
+    var left = 35 - $(this).val().length;
+    if (left < 0) {
+        left = 0;
+    }
+    $('#counter_2').text(left);
+    });
+
+    $('#desc_text_2 > input').keyup(function () {
+    var left = 25 - $(this).val().length;
+    if (left < 0) {
+        left = 0;
+    }
+    $('#counter_2').text(left);
+    });
+
+    $('#desc_text_3 > small > input').keyup(function () {
+    var left = 35 - $(this).val().length;
+    if (left < 0) {
+        left = 0;
+    }
+    $('#counter_3').text(left);
+    });
+
+    $('#desc_text_3 > input').keyup(function () {
+    var left = 25 - $(this).val().length;
+    if (left < 0) {
+        left = 0;
+    }
+    $('#counter_3').text(left);
+    });
+
+    $('#desc_text_4 > small > input').keyup(function () {
+    var left = 35 - $(this).val().length;
+    if (left < 0) {
+        left = 0;
+    }
+    $('#counter_4').text(left);
+    });
+
+    $('#desc_text_4 > input').keyup(function () {
+    var left = 25 - $(this).val().length;
+    if (left < 0) {
+        left = 0;
+    }
+    $('#counter_4').text(left);
+    });
+
+    $('#desc_text_5 > small > input').keyup(function () {
+    var left = 35 - $(this).val().length;
+    if (left < 0) {
+        left = 0;
+    }
+    $('#counter_5').text(left);
+    });
+
+    $('#desc_text_5 > input').keyup(function () {
+    var left = 25 - $(this).val().length;
+    if (left < 0) {
+        left = 0;
+    }
+    $('#counter_5').text(left);
+    });
 
 //search function
     $('#search-submit').click(function(event){
@@ -345,8 +442,7 @@ $( document ).ready(function() {
     })
     })
 
-
-  // Button For Writing Text
+// Button For Writing Text
 
       $('#text-button_0').click(function(event){
       event.preventDefault();

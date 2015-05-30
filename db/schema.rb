@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150526180925) do
+ActiveRecord::Schema.define(version: 20150530220042) do
 
   create_table "board_links", force: :cascade do |t|
     t.integer  "board_id"
@@ -38,8 +38,10 @@ ActiveRecord::Schema.define(version: 20150526180925) do
   create_table "links", force: :cascade do |t|
     t.string   "url"
     t.integer  "kind"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "name"
+    t.string   "description"
   end
 
   create_table "tags", force: :cascade do |t|

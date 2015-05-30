@@ -54,7 +54,7 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:name, :user_id, :links_attributes => [:url,:kind], :tags_attributes => [:name])
+    params.require(:board).permit(:name, :user_id, :links_attributes => [:url,:kind,:description,:name], :tags_attributes => [:name])
   end
 
 

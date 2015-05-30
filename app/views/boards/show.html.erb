@@ -20,7 +20,7 @@
       <div class="col-sm-4">                     
         <div class="card">
           <div class="kind_<%=link.kind%>" class="card-header ch-alt">
-            <h2>Margin <small>We can put text here</small></h2>
+            <h2><%=link.name%><small><%=link.description%></small></h2>
           </div >
           <div style="height:240px;" id="web_link_<%=i%>">
         <a class="embedly-card" href="<%= link.url %>"></a>
@@ -35,7 +35,7 @@
       <div class="col-sm-4">                     
         <div class="card">
           <div class="card-header bgm-green">
-            <h2>Margin <small>We can put text here</small></h2>
+            <h2><%=link.name%><small><%=link.description%></small></h2>
           </div>
           <div style="height:250px;">
         <%= link.url %>
