@@ -16,8 +16,6 @@ class BoardsController < ApplicationController
     final_hash["links_attributes"] = valid_links
     final_hash["tags_attributes"] = board_params["tags_attributes"]
     @board = Board.create(final_hash)
-   
-    #binding.pry
     redirect_to @board
   end
 

@@ -55,9 +55,6 @@
       </div>
     <% end %>
   
-
-
-
     <% i = 0 %>
     <% @web_links.each do |link| %>
       <div class="col-sm-4">                     
@@ -85,11 +82,11 @@
     </div>
     <% end %>
 
-    <!-- this needs to be fixed for when users are logged out -->
-
     <div id="current_user" style="visibility:hidden;">
-      <%= @current_user.name %>
-    </div>
+     <% if @current_user %>
+     <%= @current_user.name %>
+     <% end %>
+   </div>
 
   </div>
 
