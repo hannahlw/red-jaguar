@@ -1,14 +1,20 @@
 <div class="card">
     <div class="card-header">
-        <h3 style="text-align: center;" id="clickme">Create a New Board</h3>
+        <h1 style="text-align: center;" id="clickme">Create a New Board</h>
         <%= form_for @board do |f| %>
       <div style="text-align: center;">
-       <%= f.label :name %>
+       <%= f.label :name, style:"
+    font-size: 1.5em;" %>
        <%= f.text_field :name, required: true %>
         <%= f.hidden_field :user_id, value: @user.id %>
       </div>
     </div> 
 </div>
+
+<center>
+<%= f.button(class: "btn bgm-cyan waves-effect waves-button waves-float")%>
+<br>
+<br>
 
   <!-- <h3> Give Your Board a Tag: </h3> -->
     <%= f.fields_for(:tags, Tag.new) do |tag| %>
@@ -17,7 +23,7 @@
     <%= tag.text_field :name %><br>
     <br>
     <% end %> 
-    
+    </center>
 <div class="card-body card-padding">
     <div class="col-sm-4">
         <div class="card">
@@ -47,6 +53,8 @@
             </div>
         </div>
       </div>
+
+
 
     <div class="col-sm-4">
         <div class="card">
@@ -201,9 +209,13 @@
     
 
      
-    <%= f.submit %>
+    
     
     <% end %>
+    <br>
+    <br>
+    <br>
+
 
 
 </div>

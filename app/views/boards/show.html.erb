@@ -1,5 +1,3 @@
-
-
 <div class="card">
   <div class="card-header">
     <h1 style="text-align:center;"><%= @board.name %></h1>
@@ -7,14 +5,14 @@
 </div>
 
 <div class="card-body card-padding">
+<center>
+  <h3>By <%= @board.user.name %></h3>
+</center>
   
-  <h3>Views: <%= @board.views %></h3>
   <h4><% @board.tags.each do |tag| %>
-  <li>Tags: <%= tag.name  %></li>
+  <small style="font-size: 1em;">Tag: <%= tag.name  %></small><small style="font-size: 1em; float: right;">Views: <%= @board.views %></small>
   <% end %>
   </h4>
-
-  <h5>By <%= @board.user.name %></h5>
 
     <% i = 0 %>
     <% @soundcloud_links.each do |link| %>
@@ -75,6 +73,7 @@
     <% i += 1 %>
     <% end %>
 
+
     <% @text.each do |link| %>
       <div class="col-sm-4">                     
         <div class="card">
@@ -85,6 +84,8 @@
       </div>
     </div>
     <% end %>
+
+    <!-- this needs to be fixed for when users are logged out -->
 
     <div id="current_user" style="visibility:hidden;">
       <%= @current_user.name %>
