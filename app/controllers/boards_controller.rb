@@ -21,7 +21,7 @@ class BoardsController < ApplicationController
   end
 
   def search
-    filter = params[:search_term]
+    filter = params[:search_term].downcase
     @search_term = params[:search_term].downcase
     @boards = Board.joins(:tags).where('tags.name' => filter).limit(9)
   end
@@ -49,6 +49,7 @@ class BoardsController < ApplicationController
   end
 
   def filter
+    binding.pry
     filter = params[:filter_by]
     filtered_boards = Board.joins(:tags).where('tags.name' => filter).limit(9)
     boards_array = filtered_boards.map do |board|
