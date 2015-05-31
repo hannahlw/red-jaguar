@@ -1,40 +1,42 @@
-# Redjaguar
+# Placemat
 
 ## Description
 
-Add a short description of your app.
+Placemat is an app made for you to save important media of any kind. Login and create your own boards or stay logged out and browse other user's boards. If you see media that you you want to save you can add it to your library of media.
 
 ## Screenshots
 
-Add some spiffy screenshots of your app here.
+![alt tag](app/assets/showpage.png)
 
 ## Background
 
-Why did you want to make this app? What was your development process
-like?
+Placemat is a Ruby on Rails application that uses the Embedly API to format any link the user wishes to place on their board. It was made at the Flatiron School by students Jonathan Meyers, Waruna Perera, and Hannah Westheimer.
 
 ## Features
 
-Bullet point some of the key features of your app here.
+<ul>
+  <li>Login to Placemat and create as many boards as you wish</li>
+  <li>Place any media - Tweets, Soundclouds, Youtube Videos, Vimeo etc. - on a board, add a desciption and a title to each card you put on your board</li>
+  <li>Search for boards by tag</li>
+  <li>Browse other users boards</li>
+  <li>Save any card from any board you want to your own personal library</li>
+</ul>
+
 
 ## Usage
 
-How do users use your app?
+Login in and create your own board and save information to your own library or simply start browsing other users boards and see what informaiton they put on thier board.
 
 ## Development/Contribution
 
-Explain how people can contribute to your app. How should they write tests?
-Any things in particular you'd like to see in pull requests?
-
-## Future
-
-What features are you currently working on? Only mention things that you
-actually are implementing. No pie-in-the-sky-never-gonna-happen stuff.
+We welcome feedback and suggestions for more features. 
 
 ## Author
-
-Link to your blog, twitter, etc!
-
+<ul>
+  <li>Jonathan Meyers - [Github](https://github.com/jmeyers44)</li>
+  <li>Waruna Perera - [Github](https://github.com/wperera6)</li>
+  <li>Hannah Westheimer - [Github](https://github.com/hannahlw)</li>
+</ul>
 ## License
 
 Redjaguar is MIT Licensed. See LICENSE for details.
