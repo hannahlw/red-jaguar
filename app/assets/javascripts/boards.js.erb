@@ -442,6 +442,98 @@ $( document ).ready(function() {
     })
     })
 
+//save link to user library
+      $('#save_button_0').click(function(event){
+        var linkId = $('#save_button_0').closest("div").attr("id");
+        var data = {linkID: parseInt(linkId)}
+        var url = '/add-to-library'
+        $.ajax({
+          type: 'POST',
+          url: url,
+          data: data,
+          success: function(results){
+            $('#save_button_0 > i').attr('class', 'md md-check')
+          },
+          dataType: 'JSON' 
+        })
+      })
+
+      $('#save_button_1').click(function(event){
+        var linkId = $('#save_button_1').closest("div").attr("id");
+        var data = {linkID: parseInt(linkId)}
+        var url = '/add-to-library'
+        $.ajax({
+          type: 'POST',
+          url: url,
+          data: data,
+          success: function(results){
+            $('#save_button_1 > i').attr('class', 'md md-check')
+          },
+          dataType: 'JSON' 
+        })
+      })
+
+      $('#save_button_2').click(function(event){
+        var linkId = $('#save_button_2').closest("div").attr("id");
+        var data = {linkID: parseInt(linkId)}
+        var url = '/add-to-library'
+        $.ajax({
+          type: 'POST',
+          url: url,
+          data: data,
+          success: function(results){
+            $('#save_button_2 > i').attr('class', 'md md-check')
+          },
+          dataType: 'JSON' 
+        })
+      })
+
+      $('#save_button_3').click(function(event){
+        var linkId = $('#save_button_3').closest("div").attr("id");
+        var data = {linkID: parseInt(linkId)}
+        var url = '/add-to-library'
+        $.ajax({
+          type: 'POST',
+          url: url,
+          data: data,
+          success: function(results){
+            $('#save_button_3 > i').attr('class', 'md md-check')
+          },
+          dataType: 'JSON' 
+        })
+      })
+
+      $('#save_button_4').click(function(event){
+        var linkId = $('#save_button_4').closest("div").attr("id");
+        var data = {linkID: parseInt(linkId)}
+        var url = '/add-to-library'
+        $.ajax({
+          type: 'POST',
+          url: url,
+          data: data,
+          success: function(results){
+            $('#save_button_4 > i').attr('class', 'md md-check')
+          },
+          dataType: 'JSON' 
+        })
+      })
+
+      $('#save_button_5').click(function(event){
+        var linkId = $('#save_button_5').closest("div").attr("id");
+        var data = {linkID: parseInt(linkId)}
+        var url = '/add-to-library'
+        $.ajax({
+          type: 'POST',
+          url: url,
+          data: data,
+          success: function(results){
+            $('#save_button_5 > i').attr('class', 'md md-check')
+          },
+          dataType: 'JSON' 
+        })
+      })      
+
+
 // Button For Writing Text
 
       $('#text-button_0').click(function(event){
