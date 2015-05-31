@@ -1,5 +1,6 @@
 class BoardsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
+  #before_save { |user| user.name = user.name.downcase }
 
   def new
     @board = Board.new
@@ -21,7 +22,7 @@ class BoardsController < ApplicationController
 
   def search
     filter = params[:search_term]
-    @search_term = params[:search_term]
+    @search_term = params[:search_term].downcase
     @boards = Board.joins(:tags).where('tags.name' => filter).limit(9)
   end
 

@@ -20,9 +20,7 @@
     <i style="font-size: 1em; color: white;"><%= button_tag "", class: "top-menu", style: "display: none; text-align: center;" %></i>
     </li>
 
-    <li class="logo hidden-xs pull-right">
-    <a href="">About</a>
-    </li>
+    
     
    <% if user_signed_in?  %>
       <li class="logo hidden-xs pull-right">
@@ -31,6 +29,10 @@
       <li  class="logo hidden-xs pull-right"><%= link_to('Sign-Up', new_user_registration_path)  %> </li>
        <li  class="logo hidden-xs pull-right"><%= link_to('Login', new_user_session_path)  %> </li>
     <% end %> 
+
+    <li class="logo hidden-xs pull-right">
+    <a href="">About</a>
+    </li>
 
     </ul>   
              
