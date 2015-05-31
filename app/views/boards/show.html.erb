@@ -1,24 +1,26 @@
 <div class="card">
   <div class="card-header">
+    <% if @board.user == current_user %>
+    <%= link_to '', @board, data: {confirm: 'Are you sure?'}, :action => 'destroy', :method => :delete, :class => 'md md-clear',style: "float:right;color:grey;font-size:1.5em;"  %>
+  <% end %>
     <h1 style="text-align:center;"><%= @board.name %></h1>
+    <h4 style="text-align:center;"><small style="font-size: 1em;">By <%= @board.user.name %></small></h4>
   </div>
 </div>
 
 <div class="card-body card-padding">
 <center>
-  <h3>By <%= @board.user.name %></h3>
+  
 </center>
 
-  <div align="right">
-  <% if @board.user == current_user %>
-    <%= link_to 'Delete', @board, data: {confirm: 'Are you sure?'}, :action => 'destroy', :method => :delete, :class => 'btn btn-mini btn-danger'  %>
-  <% end %>
-  </div>
-  
+<div style="text-align:center;">
+
+      <h4 style="text-align:center;text-transform:uppercase;"><small style="font-size: 1.1em;">Views: <%= @board.views %></small></h4>
   <h4><% @board.tags.each do |tag| %>
-  <small style="font-size: 1em;">Tag: <%= tag.name  %></small><small style="font-size: 1em; float: right;">Views: <%= @board.views %></small>
+  <small style="font-size: 1em;">Tag: <%= tag.name  %></small>
   <% end %>
   </h4>
+</div>
 
   
     <% i = 0 %>
