@@ -71,11 +71,18 @@ class BoardsController < ApplicationController
     @current_user = current_user
   end
 
+  def destroy
+    @board = Board.find(params[:id])
+    @board.destroy
+  end
+
   private
 
   def board_params
     params.require(:board).permit(:name, :user_id, :links_attributes => [:url,:kind,:description,:name], :tags_attributes => [:name])
   end
+
+
 
 
 end
