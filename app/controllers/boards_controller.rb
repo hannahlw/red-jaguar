@@ -29,6 +29,24 @@ class BoardsController < ApplicationController
     @boards = Board.order(views: :desc).limit(9)
   end
 
+  def add_to_library
+    @board = Board.find_or_create_by(user_id: "#{current_user.id}", name: "My Library")
+    @link = Link.find(params["linkID"])
+    @link.boards << @board
+    message = "Added to your library"
+    respond_to do |format|
+      format.html {redirect_to @board}
+      format.json {render json: {message: message}}
+    end
+  end
+
+  def library
+    @board = Board.find_or_create_by(user_id: "#{current_user.id}", name: "My Library")
+    @web_links = @board.links.where(kind: [1,2,3,4]) 
+    @text = @board.links.where(kind: 5)
+    @current_user = current_user
+  end
+
   def filter
     filter = params[:filter_by]
     filtered_boards = Board.joins(:tags).where('tags.name' => filter).limit(9)

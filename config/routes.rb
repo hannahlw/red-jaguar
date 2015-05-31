@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   
   post '/filter', :controller => 'boards', :action => 'filter'
 
+  post '/add-to-library', :controller => 'boards', :action => 'add_to_library'
+
+  get '/library', :controller => 'boards', :action => 'library'
+
   get '/search', :controller => 'boards', :action => 'search'
 
   
