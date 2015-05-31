@@ -1,5 +1,5 @@
 class BoardsController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: [:new, :destroy]
   #before_save { |user| user.name = user.name.downcase }
 
   def new
