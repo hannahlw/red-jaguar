@@ -1,20 +1,32 @@
-<body class="login-content">
-<div class="lc-block toggled" id="l-login">
 <center>
+  <div class="col-sm-5" style="margin-left: 30%"> 
+      <div class="lc-block toggled" id="l-login" style="flo"> 
+
 <h2>Log in</h2>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>                     
+  <div class="input-group">
+      <span class="input-group-addon"><i class="md md-email"></i></span>
+      <div class="fg-line">
+          <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "email" %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+      </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  
+  <br>
+  
+  <div class="input-group">
+      <span class="input-group-addon"><i class="md md-accessibility"></i></span>
+      <div class="fg-line">
+              <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "password"%>
+      </div>
   </div>
+  
+  <br>
+    <div class="actions">
+    <%= f.button "Log in", class: "btn btn-primary waves-effect waves-button waves-float", style: "font-size: em; margin-top: 1em;" %>
+  </div>
+  <br>
+
 
   <% if devise_mapping.rememberable? -%>
     <div class="field">
@@ -22,13 +34,9 @@
       <%= f.label :remember_me %>
     </div>
   <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
+                                </div>
+                                <% end %>
 <%= render "devise/shared/links" %>
-</center>
 </div>
-</body>
+</div>
+</center>
