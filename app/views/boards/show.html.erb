@@ -8,6 +8,12 @@
 <center>
   <h3>By <%= @board.user.name %></h3>
 </center>
+
+  <div align="right">
+  <% if @board.user == current_user %>
+    <%= link_to 'Delete', @board, data: {confirm: 'Are you sure?'}, :action => 'destroy', :method => :delete, :class => 'btn btn-mini btn-danger'  %>
+  <% end %>
+  </div>
   
   <h4><% @board.tags.each do |tag| %>
   <small style="font-size: 1em;">Tag: <%= tag.name  %></small><small style="font-size: 1em; float: right;">Views: <%= @board.views %></small>
