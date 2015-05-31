@@ -10,14 +10,18 @@
     <%= link_to "Placemat", root_path, style: "font-weight: bold;" %>
     </li>
 
+    <li class="logo hidden-xs " >
+      <%= link_to "", new_board_path, class: "md md-add", style: "font-size: 1.7em; margin-top: -7px" %>
+    </li>
+
     <li class="logo hidden-xs ">
-    <%= link_to "Create a New Board", new_board_path %>
+      <%= link_to "", library_path, class: "md md-local-library", style: "font-size: 1.7em; margin-top: -7px" %>
     </li>
  
     <li  id="top-search">
-<a style=" font-size: 1.7em; color: white; margin-top: 6.5px; margin-left: 20%;" class="md-search"></a>
+<a style=" font-size: 1.7em; color: white; margin-top: 3px; margin-left: 15%;" class="md-search"></a>
     <%=form_tag('/search', method: "get") do%>
-    <i style="font-size: 1em; color: white;"><%= button_tag "", class: "top-menu", style: "display: none; text-align: center;" %></i>
+    <i style="font-size: 1em; color: white;"><%= button_tag "", class: "top-menu", id: "search-button", style: "display: none; text-align: center;" %></i>
     </li>
 
     
