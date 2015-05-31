@@ -1,9 +1,9 @@
 <div class="card">
     <div class="card-header">
-        <h1 style="text-align: center;" id="clickme">Create a New Placemat</h>
+        <h1 style="text-align: center;" id="clickme"><small style="font-size:1.2em;">Create a New Placemat</small></h>
         <%= form_for @board do |f| %>
       <div style="text-align: center;">
-       <%= f.label :name, style:"
+       <%= f.label :title, style:"
     font-size: 1.5em;" %>
        <%= f.text_field :name, required: true %>
         <%= f.hidden_field :user_id, value: @user.id %>
@@ -12,9 +12,7 @@
 </div>
 
 <center>
-<%= f.button(class: "btn bgm-cyan waves-effect waves-button waves-float")%>
-<br>
-<br>
+
 
   <!-- <h3> Give Your Board a Tag: </h3> -->
     <%= f.fields_for(:tags, Tag.new) do |tag| %>
@@ -23,8 +21,9 @@
     <%= tag.text_field :name %><br>
     <br>
     <% end %> 
+<%= f.button("Create Placemat", class: "btn bgm-blue waves-effect waves-button waves-float")%>
     </center>
-
+<br>
 <div class="card-body card-padding">
 
 <% x = 0 %>
