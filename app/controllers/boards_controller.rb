@@ -1,5 +1,5 @@
 class BoardsController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: [:new, :destroy]
   #before_save { |user| user.name = user.name.downcase }
 
   def new
@@ -69,6 +69,12 @@ class BoardsController < ApplicationController
     @web_links = @board.links.where(kind: [1,2,3,4]) 
     @text = @board.links.where(kind: 5)
     @current_user = current_user
+  end
+
+  def destroy
+    @board = Board.find(params[:id])
+    @board.destroy
+    redirect_to @board
   end
 
   private

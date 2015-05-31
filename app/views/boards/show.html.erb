@@ -4,6 +4,12 @@
   </div>
 </div>
 
+  <div align="right">
+  <% if @board.user == current_user %>
+    <%= link_to 'Delete', @board, data: {confirm: 'Are you sure?'}, :action => 'destroy', :method => :delete, :class => 'btn btn-mini btn-danger'  %>
+  <% end %>
+  </div>
+
 <div class="card-body card-padding">
 <center>
   <h3>By <%= @board.user.name %></h3>
