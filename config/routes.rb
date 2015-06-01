@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get '/search', :controller => 'boards', :action => 'search'
 
+  get '/my-placemats', :controller => 'boards', :action => 'user_placemats'
+
   
   resources :users
 

@@ -30,6 +30,10 @@ class BoardsController < ApplicationController
     @boards = Board.order(views: :desc).limit(9)
   end
 
+  def user_placemats
+    @boards = Board.where(user_id: "#{current_user.id}")
+  end
+
   def add_to_library
     @board = Board.find_or_create_by(user_id: "#{current_user.id}", name: "My Library")
     @link = Link.find(params["linkID"])
