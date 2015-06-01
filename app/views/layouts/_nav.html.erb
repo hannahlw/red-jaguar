@@ -7,7 +7,11 @@
 <header id="header">
   <ul class="header-inner top-menu" style="margin-top: 15px;">
     <li class="logo hidden-xs" style="margin-left: 2%;">
+    <% if user_signed_in? %>
     <%= link_to "Placemat", my_placemats_path, style: "font-weight: bold;" %>
+    <% else %>
+    <%= link_to "Placemat", root_path, style: "font-weight: bold;" %>
+    <% end %>
     </li>
 
     <li class="logo top-menu" >
